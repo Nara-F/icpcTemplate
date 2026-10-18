@@ -1,4 +1,4 @@
-# icpcBoard
+# icpcTemplate
 
 自用 ICPC 算法板子，整理常用模板与调试方法。内容以 Markdown 管理，可构建为 Markdown、HTML 和 PDF。
 
@@ -19,9 +19,9 @@ make all
 
 PDF 按 [OI-Wiki/OI-Wiki-export](https://github.com/OI-wiki/OI-Wiki-export) 的 Typst 版式重构：A4 单栏、10 pt 宋体正文、居中小节标题、奇偶页章节页眉、9 pt 代码、语法高亮、行号和交替浅灰底。目录可点击，跨页表格重复表头，代码长行换行且跨页保持原行号。目录使用 PDF 物理页码，便于打印与电子查找。
 
-`make markdown`、`make html`、`make typst`、`make pdf` 分别构建相应格式；`make all` 生成全部格式。主要输出为 `output/pdf/icpcBoard.pdf`，同时生成 Markdown、内嵌样式的独立 HTML 和可独立编译的 `output/typst/icpcBoard.typ`。HTML 提供相同视觉风格的阅读版；PDF 排版以 Typst 为准。
+`make markdown`、`make html`、`make typst`、`make pdf` 分别构建相应格式；`make all` 生成全部格式。主要输出为 `output/pdf/icpcTemplate.pdf`，同时生成 Markdown、内嵌样式的独立 HTML 和可独立编译的 `output/typst/icpcTemplate.typ`。HTML 提供相同视觉风格的阅读版；PDF 排版以 Typst 为准。
 
-PDF 版式编辑 `styles/icpcBoard.typ`，封面与目录编辑 `templates/document.typ`；HTML 样式编辑 `styles/icpcBoard.css`。输入顺序与输出路径仍由 `config/build.json` 管理。设计来源、改动与许可见 [排版说明](docs/typesetting.md)。
+PDF 版式编辑 `styles/icpcTemplate.typ`，封面与目录编辑 `templates/document.typ`；HTML 样式编辑 `styles/icpcTemplate.css`。输入顺序与输出路径仍由 `config/build.json` 管理。设计来源、改动与许可见 [排版说明](docs/typesetting.md)。
 
 ## 内容格式
 
@@ -38,8 +38,8 @@ content/10-keyword-index.md   题意关键词索引
 scripts/build.py             统一构建入口
 scripts/typst_pdf.py          锚点兼容、公式转换与 PDF 校验
 scripts/setup_fonts.py        固定版本字体下载与校验
-styles/icpcBoard.typ          Typst 正文、页眉与代码排版
-styles/icpcBoard.css          HTML 阅读样式
+styles/icpcTemplate.typ          Typst 正文、页眉与代码排版
+styles/icpcTemplate.css          HTML 阅读样式
 templates/document.typ       PDF 封面与目录
 templates/document.html      独立 HTML 框架
 tests/                        代码块检查与定向回归检查
@@ -64,6 +64,6 @@ python3 tests/check_foundations.py
 python3 tests/check_algorithms.py
 ```
 
-`check_foundations.py` 独立编译第 01–04 章的 45 个 C++17 围栏代码块，并运行 Python 随机对拍工具的成功、错误答案缩减、异常退出与超时检查，以及构造题断言和滑动窗口边界检查。`check_algorithms.py` 检查第 05–09 章代码块，并运行图论、数据结构、字符串和几何等算法的定向回归样例。
+`check_foundations.py` 独立编译第 01–04 章的 C++17 围栏代码块，并运行 Python 运行/样例/三程序对拍工具的成功、失败保存、编译失败、异常退出与超时检查，以及随机结构生成器的种子复现、数组/树/图/DAG 约束检查，以及构造题断言和滑动窗口边界检查。`check_algorithms.py` 检查第 05–09 章代码块，并运行图论、数据结构、字符串和几何等算法的定向回归样例。
 
 第 01–04 章与第 05–09 章的来源和覆盖说明见 [docs/coverage-01-04.md](docs/coverage-01-04.md) 与 [docs/coverage-05-09.md](docs/coverage-05-09.md)。

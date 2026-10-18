@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the icpcBoard Markdown, self-contained HTML, and print-ready PDF."""
+"""Build the icpcTemplate Markdown, self-contained HTML, and print-ready PDF."""
 from __future__ import annotations
 import argparse, html, json, re, shutil, subprocess, unicodedata
 from xml.etree import ElementTree
@@ -163,7 +163,7 @@ def main():
     if args.format=="markdown":
         print(f"Built {md_path.relative_to(ROOT)}.")
         return
-    css=(ROOT/"styles/icpcBoard.css").read_text(encoding="utf-8")
+    css=(ROOT/"styles/icpcTemplate.css").read_text(encoding="utf-8")
     template=ROOT/"templates/document.html"
     page=render(markdown_text,cfg["title"],cfg.get("subtitle",""),cfg.get("language","zh-CN"),css,template)
     validate_html(page,markdown_text)

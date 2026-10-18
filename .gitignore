@@ -6,5 +6,5 @@ __pycache__/
 /output/*
 !/output/pdf/
 /output/pdf/*
-!/output/pdf/icpcBoard.pdf
+!/output/pdf/icpcTemplate.pdf
 /.fonts/

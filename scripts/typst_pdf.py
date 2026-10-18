@@ -83,7 +83,7 @@ def build_typst(root, cfg, markdown_text):
     out.parent.mkdir(parents=True, exist_ok=True)
     # Generated .typ is self-contained and can also be compiled with Typst CLI.
     template = (root / "templates/document.typ").read_text(encoding="utf-8")
-    style = (root / "styles/icpcBoard.typ").read_text(encoding="utf-8")
+    style = (root / "styles/icpcTemplate.typ").read_text(encoding="utf-8")
     for key in ("title", "subtitle"):
         template = template.replace("{{ " + key + " }}", json.dumps(cfg.get(key, ""), ensure_ascii=False))
     out.write_text(style + "\n" + template + "\n" + body, encoding="utf-8")

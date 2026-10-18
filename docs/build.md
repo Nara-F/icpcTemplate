@@ -22,10 +22,10 @@ python3 tests/check_build.py
 
 | 文件 | 用途 |
 |---|---|
-| `output/markdown/icpcBoard.md` | 合并后的源文本 |
-| `output/html/icpcBoard.html` | 内嵌 CSS 的独立阅读版，完整构建后目录列出 PDF 页码 |
-| `output/typst/icpcBoard.typ` | 自包含 Typst 文件，`typst compile --font-path .fonts` 也可编译 |
-| `output/pdf/icpcBoard.pdf` | 可打印 PDF，作为仓库中的成品样例保留 |
+| `output/markdown/icpcTemplate.md` | 合并后的源文本 |
+| `output/html/icpcTemplate.html` | 内嵌 CSS 的独立阅读版，完整构建后目录列出 PDF 页码 |
+| `output/typst/icpcTemplate.typ` | 自包含 Typst 文件，`typst compile --font-path .fonts` 也可编译 |
+| `output/pdf/icpcTemplate.pdf` | 可打印 PDF，作为仓库中的成品样例保留 |
 
 `make clean` 删除以上生成结果；不会删除源文档或缓存字体。
 

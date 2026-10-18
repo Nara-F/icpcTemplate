@@ -26,4 +26,4 @@ all:
 	$(PYTHON) scripts/build.py --format all
 
 clean:
-	rm -f output/html/icpcBoard.html output/markdown/icpcBoard.md output/typst/icpcBoard.typ output/pdf/icpcBoard.pdf
+	rm -f output/html/icpcTemplate.html output/markdown/icpcTemplate.md output/typst/icpcTemplate.typ output/pdf/icpcTemplate.pdf

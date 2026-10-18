@@ -1,15 +1,15 @@
 {
-  "title": "icpcBoard",
+  "title": "icpcTemplate",
   "subtitle": "ICPC Algorithm Reference",
   "language": "zh-CN",
   "chapter_glob": "content/chapters/*.md",
-  "html": "output/html/icpcBoard.html",
-  "markdown": "output/markdown/icpcBoard.md",
-  "pdf": "output/pdf/icpcBoard.pdf",
+  "html": "output/html/icpcTemplate.html",
+  "markdown": "output/markdown/icpcTemplate.md",
+  "pdf": "output/pdf/icpcTemplate.pdf",
   "after_chapters": [
     "content/10-keyword-index.md"
   ],
-  "typst": "output/typst/icpcBoard.typ",
+  "typst": "output/typst/icpcTemplate.typ",
   "font_paths": [
     ".fonts"
   ]

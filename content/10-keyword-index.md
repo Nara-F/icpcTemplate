@@ -126,3 +126,46 @@
 4. 下标、区间、无解状态、重边、自环、负权、取模是否对齐？
 5. 复制模板后，哪三个位置必须按本题修改？
 ```
+
+## 10.6 常用英文术语对照 {#q-index-english-terms}
+
+用于阅读英文题面；单调性直接核对不等号，避免把允许相等误读为严格变化。
+
+| 中文 | 英文常见表述 | 含义 / 易混点 |
+|---|---|---|
+| 非递减（单调不减） | non-decreasing / nondecreasing | $a_i\le a_{i+1}$，允许相等 |
+| 严格递增 | strictly increasing | $a_i<a_{i+1}$ |
+| 非递增（单调不增） | non-increasing / nonincreasing | $a_i\ge a_{i+1}$，允许相等 |
+| 严格递减 | strictly decreasing | $a_i>a_{i+1}$；单独的 increasing / decreasing 需看题面定义 |
+| 升序 / 降序 | ascending / descending order | 是否允许相等以题面为准 |
+| 互不相同 | distinct / pairwise distinct | 任意两个元素不相等 |
+| 集合 | set | 不计重复元素，元素无顺序 |
+| 多重集合 | multiset | 允许重复，计入各元素出现次数；元素无顺序 |
+| 子集 / 真子集 | subset / proper subset | 子集可等于原集合；真子集不可 |
+| 并集 / 交集 / 差集 | union / intersection / set difference | 差集 $A\setminus B$ 有方向 |
+| 不相交 | disjoint | 交集为空；pairwise disjoint 表示两两不相交 |
+| 序列 / 数组 | sequence / array | 有顺序，可含重复元素 |
+| 子序列 | subsequence | 删除若干元素得到，保持相对顺序，不要求连续 |
+| 子数组 / 子串 | subarray / substring | 连续的一段；字符串题中的 subsequence 仍可不连续 |
+| 前缀 / 后缀 | prefix / suffix | 从开头 / 到结尾的一段；proper prefix / suffix 不含整个序列 |
+| 排列 | permutation | 常指 $1$ 到 $n$ 各出现一次；也可指给定元素的重排，需看定义 |
+| 字典序 | lexicographical order / lexicographic order | 首个不同元素决定大小；一方为另一方前缀时较短者更小 |
+| 连续的 / 相邻的 | consecutive / adjacent | consecutive integers 指连续整数；adjacent 常指相邻位置或图中邻接 |
+| 至多 / 至少 / 恰好 | at most / at least / exactly | 分别对应 $\le$ / $\ge$ / $=$ |
+| 任意 / 存在 | for every / there exists | 分别为全称 / 存在量词；any 需结合上下文判断 |
+| 非负 / 正 / 非正 / 负 | non-negative / positive / non-positive / negative | 分别对应 $\ge0$ / $>0$ / $\le0$ / $<0$ |
+| 向下取整 / 向上取整 | floor / ceiling (ceil) | $\lfloor x\rfloor$ / $\lceil x\rceil$；负数时向下取整不等于向零截断 |
+| 因数 / 倍数 | divisor (factor) / multiple | $d$ divides $n$ 表示 $d\mid n$ |
+| 互质 | coprime / relatively prime | 最大公约数为 $1$；pairwise coprime 表示两两互质 |
+| 余数 / 取模 | remainder / modulo | 负数的余数约定需核对题面与语言行为 |
+| 无向图 / 有向图 | undirected graph / directed graph | 边是否有方向 |
+| 顶点 / 边 / 度数 | vertex (node) / edge / degree | 有向图另分 in-degree（入度）与 out-degree（出度） |
+| 重边 / 自环 | parallel edges (multiple edges) / self-loop | 同端点的多条边 / 端点为同一顶点的边 |
+| 简单图 | simple graph | 通常无重边、无自环；以题面定义为准 |
+| 连通分量 | connected component | 无向图的极大连通部分；有向图需区分强连通与弱连通 |
+| 路径 / 环 | path / cycle | 顶点或边能否重复须核对定义；simple path 通常要求顶点不重复 |
+| 子树 / 祖先 / 后代 | subtree / ancestor / descendant | 是否包含节点自身需看定义；strict ancestor 排除自身 |
+| 生成树 / 最小生成树 | spanning tree / minimum spanning tree (MST) | 覆盖所有顶点的树 / 总边权最小的生成树 |
+| 可行解 / 最优解 | feasible solution / optimal solution | 满足约束 / 在可行解中使目标最优 |
+| 任意一个解 | any solution / any valid answer | 输出一个合法解即可，通常无须最优或字典序最小 |
+| 对某模数取模输出 | modulo $m$ | 输出答案模 $m$；通常规范到 $[0,m-1]$（$m>0$） |
